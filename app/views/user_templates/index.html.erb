@@ -1,0 +1,31 @@
+<h1> List of users </h1>
+
+<form action="/insert_user" method="post">
+    <label for="username_box">
+      Username
+    </label>
+    <input type="text" id="username_box" name="new_username" value="Enter a username...">
+    <button> Add user </button>
+</form>
+
+<table border="1">
+  <tr>
+    <th>
+      ID
+    </th>
+
+    <th>
+      Username
+    </th>
+
+    <td>
+    </td>
+  </tr>
+  <% @allusers.each do |user| %>
+  <tr>
+    <td> <%=user.id%> </td>
+    <td> <%=user.username%> </td>
+    <td><a href="/users/<%= user.id %>"> Show details </a></td>
+  </tr>
+  <% end %>
+</table>
