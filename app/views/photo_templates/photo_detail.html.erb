@@ -20,13 +20,13 @@
       <label for="new_image">Image</label>
       <input id="new_image" type="text" name="input_image" value="<%=@photo.image%>">
       <label for="new_caption">Caption</label>
-      <input id="new_caption" type="text" name="input_caption" value="<%=@photo.caption%>">
+      <textarea id="new_caption" type="text" name="input_caption"><%=@photo.caption%></textarea>
       <button>Update photo</button>
     </form>
   </dd>
 
   <dt>Delete photo</dt>
-  <dd><a>Delete this photo</a></dd>
+  <dd><a href = "/delete_photo/<%=@photo.id%>">Delete this photo</a></dd>
 </dl>
 
 <h2> Comments </h2>
@@ -53,6 +53,6 @@
   <label for="aid">Author ID</label>
   <input id="aid" type="text" name="input_aid" placeholder="Enter your author ID">
   <label for="comment">Comment</label>
-  <input id="coment" type="text" name="input_comment" placeholder="Enter a comment...">
+  <textarea id="comment" type="text" name="input_comment" placeholder="Enter a comment..."></textarea>
   <button>Add comment</button>
 </form>
